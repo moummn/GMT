@@ -1,5 +1,10 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class form_Main
+    '用于拖动窗体
+    Dim Mouse_Drag As Boolean = False
+    Dim Mouse_X As Integer = 0
+    Dim Mouse_Y As Integer = 0
+    '用于处理窗体外观（MDI窗体无3D边框）
     <DllImport("user32.dll", ExactSpelling:=True)>
     Private Shared Function SetWindowPos(ByVal hWnd As IntPtr, ByVal hWndInsertAfter As IntPtr, ByVal X As Integer, ByVal Y As Integer, ByVal cx As Integer, ByVal cy As Integer,
          ByVal uFlags As UInteger) As Integer
@@ -87,5 +92,34 @@ Public Class form_Main
 
     Private Sub form_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None
+    End Sub
+
+    Private Sub Button_Minisize_Click(sender As Object, e As EventArgs) Handles Button_Minisize.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub Button_Close_Click(sender As Object, e As EventArgs) Handles Button_Close.Click
+        Me.Close()
+    End Sub
+
+    '拖动窗体
+    Private Sub TitleMove_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) _
+        Handles Panel_Top.MouseDown, Label_Title.MouseDown
+        Mouse_Drag = True
+        Mouse_X = Windows.Forms.Cursor.Position.X - Me.Left
+        Mouse_Y = Windows.Forms.Cursor.Position.Y - Me.Top
+    End Sub
+
+    Private Sub TitleMove_MouseMove(sender As Object, e As System.Windows.Forms.MouseEventArgs) _
+        Handles Panel_Top.MouseMove, Label_Title.MouseMove
+        If Mouse_Drag Then
+            Me.Top = Windows.Forms.Cursor.Position.Y - Mouse_Y
+            Me.Left = Windows.Forms.Cursor.Position.X - Mouse_X
+        End If
+    End Sub
+
+    Private Sub TitleMove_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) _
+        Handles Panel_Top.MouseUp, Label_Title.MouseUp
+        Mouse_Drag = False
     End Sub
 End Class
