@@ -58,10 +58,10 @@ Partial Class form_Main
         Me.Button_Settings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.Button_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button_Settings.Font = New System.Drawing.Font("Webdings", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Button_Settings.Location = New System.Drawing.Point(653, 2)
+        Me.Button_Settings.Location = New System.Drawing.Point(684, 4)
         Me.Button_Settings.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button_Settings.Name = "Button_Settings"
-        Me.Button_Settings.Size = New System.Drawing.Size(42, 36)
+        Me.Button_Settings.Size = New System.Drawing.Size(32, 30)
         Me.Button_Settings.TabIndex = 3
         Me.Button_Settings.Text = "0"
         Me.Button_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -73,13 +73,13 @@ Partial Class form_Main
         Me.Button_Close.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.Button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button_Close.Font = New System.Drawing.Font("Webdings", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Button_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button_Close.Location = New System.Drawing.Point(756, 2)
+        Me.Button_Close.Location = New System.Drawing.Point(763, 4)
         Me.Button_Close.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button_Close.Name = "Button_Close"
-        Me.Button_Close.Size = New System.Drawing.Size(42, 36)
+        Me.Button_Close.Size = New System.Drawing.Size(32, 30)
         Me.Button_Close.TabIndex = 2
         Me.Button_Close.Text = "r"
+        Me.Button_Close.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button_Close.UseVisualStyleBackColor = True
         '
         'Button_Minisize
@@ -87,11 +87,10 @@ Partial Class form_Main
         Me.Button_Minisize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.Button_Minisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button_Minisize.Font = New System.Drawing.Font("Webdings", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Button_Minisize.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button_Minisize.Location = New System.Drawing.Point(707, 2)
+        Me.Button_Minisize.Location = New System.Drawing.Point(726, 4)
         Me.Button_Minisize.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button_Minisize.Name = "Button_Minisize"
-        Me.Button_Minisize.Size = New System.Drawing.Size(42, 36)
+        Me.Button_Minisize.Size = New System.Drawing.Size(32, 30)
         Me.Button_Minisize.TabIndex = 1
         Me.Button_Minisize.Text = "0"
         Me.Button_Minisize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
