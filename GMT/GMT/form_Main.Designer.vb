@@ -31,6 +31,8 @@ Partial Class form_Main
         Me.Label_Title = New System.Windows.Forms.Label()
         Me.Panel_Left = New System.Windows.Forms.Panel()
         Me.Button_About = New System.Windows.Forms.Button()
+        Me.Button_ROM = New System.Windows.Forms.Button()
+        Me.Button_HEX = New System.Windows.Forms.Button()
         Me.Panel_Top.SuspendLayout()
         Me.Panel_Left.SuspendLayout()
         Me.SuspendLayout()
@@ -109,6 +111,8 @@ Partial Class form_Main
         'Panel_Left
         '
         Me.Panel_Left.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.Panel_Left.Controls.Add(Me.Button_HEX)
+        Me.Panel_Left.Controls.Add(Me.Button_ROM)
         Me.Panel_Left.Controls.Add(Me.Button_About)
         Me.Panel_Left.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel_Left.Location = New System.Drawing.Point(0, 40)
@@ -121,12 +125,34 @@ Partial Class form_Main
         '
         Me.Button_About.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
         Me.Button_About.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button_About.Location = New System.Drawing.Point(0, 0)
+        Me.Button_About.Location = New System.Drawing.Point(0, 517)
         Me.Button_About.Name = "Button_About"
         Me.Button_About.Size = New System.Drawing.Size(150, 40)
         Me.Button_About.TabIndex = 1
         Me.Button_About.Text = "关于(&A)"
         Me.Button_About.UseVisualStyleBackColor = True
+        '
+        'Button_ROM
+        '
+        Me.Button_ROM.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.Button_ROM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button_ROM.Location = New System.Drawing.Point(0, 0)
+        Me.Button_ROM.Name = "Button_ROM"
+        Me.Button_ROM.Size = New System.Drawing.Size(150, 40)
+        Me.Button_ROM.TabIndex = 2
+        Me.Button_ROM.Text = "ROM文件管理(&F)"
+        Me.Button_ROM.UseVisualStyleBackColor = True
+        '
+        'Button_HEX
+        '
+        Me.Button_HEX.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.Button_HEX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button_HEX.Location = New System.Drawing.Point(0, 46)
+        Me.Button_HEX.Name = "Button_HEX"
+        Me.Button_HEX.Size = New System.Drawing.Size(150, 40)
+        Me.Button_HEX.TabIndex = 3
+        Me.Button_HEX.Text = "源文件(&R)"
+        Me.Button_HEX.UseVisualStyleBackColor = True
         '
         'form_Main
         '
@@ -162,4 +188,6 @@ Partial Class form_Main
     Friend WithEvents Button_Close As Button
     Friend WithEvents Button_Settings As Button
     Friend WithEvents Button_About As Button
+    Friend WithEvents Button_ROM As Button
+    Friend WithEvents Button_HEX As Button
 End Class

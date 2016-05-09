@@ -1,5 +1,38 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class form_Main
+    '一些全局变量
+    Dim CurrentWindow As New Form '当前显示的窗体页
+    Dim CurrentWindowIndex As Integer = 0 '当前显示的窗体页的索引值
+    '0 - None 无
+    '1 - About “关于”页面
+    '2 - ROM “ROM文件管理”页面
+    Private Sub sbChangeWindow(ByVal Index As Integer)
+        If Index = CurrentWindowIndex Then Exit Sub '如果要打开的和当前页面一样，就自动退出
+        If CurrentWindowIndex <> 0 Then
+            '关闭当前已打开的窗体
+            CurrentWindow.Visible = False '隐藏这个窗体（*-*测试功能，可能会引起BUG）
+        End If
+        '改变窗体样式
+        If Me.IsMdiContainer Then
+            ChangeMdiClientBorderStyle(BorderStyle.None, getMdiClientHandle)
+        End If
+
+        Select Case Index
+            Case 1
+                CurrentWindow = form_About
+            Case 2
+                CurrentWindow = form_ROM
+        End Select
+        With CurrentWindow
+            .MdiParent = Me
+            .FormBorderStyle = FormBorderStyle.None
+            .Dock = DockStyle.Fill
+            .Visible = True
+            .Show()
+            CurrentWindowIndex = Index
+        End With
+    End Sub
+
     '用于拖动窗体
     Dim Mouse_Drag As Boolean = False
     Dim Mouse_X As Integer = 0
@@ -79,14 +112,7 @@ Public Class form_Main
         End If
     End Function
     Private Sub Timer_FormLoad_Tick(sender As Object, e As EventArgs) Handles Timer_FormLoad.Tick
-        If Me.IsMdiContainer Then
-            ChangeMdiClientBorderStyle(BorderStyle.None, getMdiClientHandle)
-        End If
-        Dim frm As New form_About
-        frm.MdiParent = Me
-        frm.FormBorderStyle = FormBorderStyle.None
-        frm.Dock = DockStyle.Fill
-        frm.Show()
+        sbChangeWindow(1)
         Timer_FormLoad.Enabled = False
     End Sub
 
@@ -121,5 +147,13 @@ Public Class form_Main
     Private Sub TitleMove_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) _
         Handles Panel_Top.MouseUp, Label_Title.MouseUp
         Mouse_Drag = False
+    End Sub
+
+    Private Sub Button_About_Click(sender As Object, e As EventArgs) Handles Button_About.Click
+        sbChangeWindow(1)
+    End Sub
+
+    Private Sub Button_ROM_Click(sender As Object, e As EventArgs) Handles Button_ROM.Click
+        sbChangeWindow(2)
     End Sub
 End Class
