@@ -25,6 +25,7 @@ Partial Class form_ROM
         Me.Button_ViewFolders = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button_Use = New System.Windows.Forms.Button()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.SuspendLayout()
         '
         'Button_ViewFolders
@@ -41,11 +42,14 @@ Partial Class form_ROM
         '
         'ListBox1
         '
+        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ListBox1.ForeColor = System.Drawing.Color.White
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 20
         Me.ListBox1.Location = New System.Drawing.Point(8, 8)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(515, 544)
+        Me.ListBox1.Size = New System.Drawing.Size(515, 542)
         Me.ListBox1.TabIndex = 1
         '
         'Button_Use
@@ -62,6 +66,7 @@ Partial Class form_ROM
         '
         'form_ROM
         '
+        Me.AcceptButton = Me.Button_Use
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
@@ -86,4 +91,5 @@ Partial Class form_ROM
     Friend WithEvents Button_ViewFolders As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button_Use As Button
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class

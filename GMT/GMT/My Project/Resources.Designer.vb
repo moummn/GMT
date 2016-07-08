@@ -59,5 +59,14 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  查找类似 黄金太阳综合工具 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property App_Name() As String
+            Get
+                Return ResourceManager.GetString("App_Name", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

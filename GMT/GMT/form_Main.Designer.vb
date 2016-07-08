@@ -30,9 +30,9 @@ Partial Class form_Main
         Me.Button_Minisize = New System.Windows.Forms.Button()
         Me.Label_Title = New System.Windows.Forms.Label()
         Me.Panel_Left = New System.Windows.Forms.Panel()
-        Me.Button_About = New System.Windows.Forms.Button()
-        Me.Button_ROM = New System.Windows.Forms.Button()
         Me.Button_HEX = New System.Windows.Forms.Button()
+        Me.Button_ROM = New System.Windows.Forms.Button()
+        Me.Button_About = New System.Windows.Forms.Button()
         Me.Panel_Top.SuspendLayout()
         Me.Panel_Left.SuspendLayout()
         Me.SuspendLayout()
@@ -100,11 +100,11 @@ Partial Class form_Main
         '
         'Label_Title
         '
-        Me.Label_Title.AutoSize = True
+        Me.Label_Title.AutoEllipsis = True
         Me.Label_Title.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_Title.Location = New System.Drawing.Point(3, 9)
+        Me.Label_Title.Location = New System.Drawing.Point(3, 10)
         Me.Label_Title.Name = "Label_Title"
-        Me.Label_Title.Size = New System.Drawing.Size(129, 20)
+        Me.Label_Title.Size = New System.Drawing.Size(727, 23)
         Me.Label_Title.TabIndex = 0
         Me.Label_Title.Text = "黄金太阳综合工具"
         '
@@ -121,16 +121,17 @@ Partial Class form_Main
         Me.Panel_Left.Size = New System.Drawing.Size(150, 560)
         Me.Panel_Left.TabIndex = 0
         '
-        'Button_About
+        'Button_HEX
         '
-        Me.Button_About.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
-        Me.Button_About.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button_About.Location = New System.Drawing.Point(0, 517)
-        Me.Button_About.Name = "Button_About"
-        Me.Button_About.Size = New System.Drawing.Size(150, 40)
-        Me.Button_About.TabIndex = 1
-        Me.Button_About.Text = "关于(&A)"
-        Me.Button_About.UseVisualStyleBackColor = True
+        Me.Button_HEX.Enabled = False
+        Me.Button_HEX.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.Button_HEX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button_HEX.Location = New System.Drawing.Point(0, 46)
+        Me.Button_HEX.Name = "Button_HEX"
+        Me.Button_HEX.Size = New System.Drawing.Size(150, 40)
+        Me.Button_HEX.TabIndex = 3
+        Me.Button_HEX.Text = "源文件(&R)"
+        Me.Button_HEX.UseVisualStyleBackColor = True
         '
         'Button_ROM
         '
@@ -143,16 +144,16 @@ Partial Class form_Main
         Me.Button_ROM.Text = "ROM文件管理(&F)"
         Me.Button_ROM.UseVisualStyleBackColor = True
         '
-        'Button_HEX
+        'Button_About
         '
-        Me.Button_HEX.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
-        Me.Button_HEX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button_HEX.Location = New System.Drawing.Point(0, 46)
-        Me.Button_HEX.Name = "Button_HEX"
-        Me.Button_HEX.Size = New System.Drawing.Size(150, 40)
-        Me.Button_HEX.TabIndex = 3
-        Me.Button_HEX.Text = "源文件(&R)"
-        Me.Button_HEX.UseVisualStyleBackColor = True
+        Me.Button_About.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.Button_About.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button_About.Location = New System.Drawing.Point(0, 517)
+        Me.Button_About.Name = "Button_About"
+        Me.Button_About.Size = New System.Drawing.Size(150, 40)
+        Me.Button_About.TabIndex = 1
+        Me.Button_About.Text = "关于(&A)"
+        Me.Button_About.UseVisualStyleBackColor = True
         '
         'form_Main
         '
@@ -174,7 +175,6 @@ Partial Class form_Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GMT"
         Me.Panel_Top.ResumeLayout(False)
-        Me.Panel_Top.PerformLayout()
         Me.Panel_Left.ResumeLayout(False)
         Me.ResumeLayout(False)
 
