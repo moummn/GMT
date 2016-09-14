@@ -123,7 +123,6 @@ Partial Class form_Main
         '
         'Button_HEX
         '
-        Me.Button_HEX.Enabled = False
         Me.Button_HEX.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
         Me.Button_HEX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button_HEX.Location = New System.Drawing.Point(0, 46)
@@ -157,7 +156,7 @@ Partial Class form_Main
         '
         'form_Main
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(800, 600)

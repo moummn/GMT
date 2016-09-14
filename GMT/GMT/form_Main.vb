@@ -6,6 +6,7 @@ Public Class form_Main
     '0 - None 无
     '1 - About “关于”页面
     '2 - ROM “ROM文件管理”页面
+    '3 - HEX “源文件”页面
     Private Sub sbChangeWindow(ByVal Index As Integer)
         If Index = CurrentWindowIndex Then Exit Sub '如果要打开的和当前页面一样，就自动退出
         If CurrentWindowIndex <> 0 Then
@@ -22,6 +23,8 @@ Public Class form_Main
                 CurrentWindow = form_About
             Case 2
                 CurrentWindow = form_ROM
+            Case 3
+                CurrentWindow = form_HEX
         End Select
         With CurrentWindow
             .MdiParent = Me
@@ -155,5 +158,8 @@ Public Class form_Main
 
     Private Sub Button_ROM_Click(sender As Object, e As EventArgs) Handles Button_ROM.Click
         sbChangeWindow(2)
+    End Sub
+    Private Sub Button_HEX_Click(sender As Object, e As EventArgs) Handles Button_HEX.Click
+        sbChangeWindow(3)
     End Sub
 End Class
