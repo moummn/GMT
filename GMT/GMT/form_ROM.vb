@@ -38,4 +38,8 @@
 
 
     End Sub
+
+    Private Sub ListBox1_DoubleClick(sender As Object, e As EventArgs) Handles ListBox1.DoubleClick
+        Call Button_Use_Click(sender, e)
+    End Sub
 End Class

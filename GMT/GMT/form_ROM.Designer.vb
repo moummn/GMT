@@ -46,10 +46,10 @@ Partial Class form_ROM
         Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ListBox1.ForeColor = System.Drawing.Color.White
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 20
+        Me.ListBox1.ItemHeight = 23
         Me.ListBox1.Location = New System.Drawing.Point(8, 8)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(515, 542)
+        Me.ListBox1.Size = New System.Drawing.Size(515, 531)
         Me.ListBox1.TabIndex = 1
         '
         'Button_Use
@@ -67,7 +67,7 @@ Partial Class form_ROM
         'form_ROM
         '
         Me.AcceptButton = Me.Button_Use
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(650, 560)
